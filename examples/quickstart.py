@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from xapiweb import XClient
 from xapiweb.resources.timelines import extract_tweets, cursors
 
-SESSION = "/home/user/unzipped/x_api_pack/my_data.json"
+SESSION = os.environ.get("XAPIWEB_SESSION", "my_data.json")
 
 x = XClient.from_session_file(SESSION)
 print("health:", x.health().status)

@@ -2,7 +2,8 @@
 import sys
 from xapiweb import XClient
 
-x = XClient.from_session_file("my_data.json")
+session_path = sys.argv[1] if len(sys.argv) > 1 else "my_data.json"
+x = XClient.from_session_file(session_path)
 print("health:", x.health().status)
 print("me:", x.me()["screen_name"], x.me()["id"])
 print("viewer:", x.users.viewer().status)
