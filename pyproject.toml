@@ -1,10 +1,15 @@
 [project]
 name = "xapiweb"
-version = "1.5.2"
+version = "1.5.3"
 description = "Unified Python library for the X web API (stdlib only, 157 proven endpoints)"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/newidu/xapiweb"
+Documentation = "https://newidu.github.io/xapiweb/"
+Repository = "https://github.com/newidu/xapiweb"
 
 [build-system]
 requires = ["setuptools"]
