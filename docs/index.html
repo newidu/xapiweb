@@ -1,59 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>xapiweb Documentation</title>
-  <style>
-    :root { color-scheme: light; --ink:#111; --muted:#555; --line:#d8d8d8; --paper:#fff; --soft:#f4f4f4; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
-    header { border-bottom:2px solid var(--ink); padding:56px 24px 44px; }
-    .wrap { max-width:1080px; margin:auto; }
-    .eyebrow { font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
-    h1 { font-size:clamp(42px,8vw,84px); line-height:.95; letter-spacing:-.06em; margin:18px 0; }
-    h2 { font-size:28px; line-height:1.15; letter-spacing:-.025em; margin:0 0 16px; }
-    h3 { font-size:18px; margin:28px 0 8px; }
-    p { max-width:760px; }
-    .lead { font-size:20px; max-width:780px; }
-    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
-    .tag { border:1px solid var(--ink); padding:5px 10px; font-size:13px; font-weight:700; }
-    main { padding:42px 24px 72px; }
-    section { border-top:1px solid var(--line); padding:38px 0; }
-    section:first-child { border-top:0; padding-top:0; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
-    .card { border:1px solid var(--line); padding:20px; background:var(--paper); }
-    .card strong { display:block; margin-bottom:6px; }
-    pre { overflow:auto; background:#111; color:#fff; padding:18px; border-radius:0; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
-    code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--soft); padding:2px 5px; }
-    pre code { background:transparent; padding:0; }
-    .notice { border-left:4px solid var(--ink); background:var(--soft); padding:14px 18px; margin:20px 0; }
-    table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14px; }
-    th,td { border-bottom:1px solid var(--line); padding:10px 8px; text-align:left; vertical-align:top; }
-    th { font-weight:800; }
-    footer { border-top:2px solid var(--ink); padding:28px 24px 44px; color:var(--muted); }
-    @media (max-width:640px) { header { padding-top:36px; } main { padding-top:30px; } h2 { font-size:25px; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="xapiweb documentation: a zero-dependency Python client for selected X web API operations.">
+<title>xapiweb — Documentation</title>
+<style>
+:root{--ink:#111;--muted:#606060;--line:#d7d7d7;--soft:#f5f5f5;--paper:#fff;--dark:#111;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-underline-offset:3px}button,input{font:inherit}button{cursor:pointer}.shell{max-width:var(--max);margin:auto;padding:0 24px}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topbar-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:-.04em;text-decoration:none;font-size:20px}.brand small{font-size:11px;letter-spacing:.08em;margin-left:8px;color:var(--muted);font-weight:700}.topnav{display:flex;gap:18px;align-items:center;font-size:13px;font-weight:700}.topnav a{text-decoration:none}.topnav a:hover{text-decoration:underline}.github-btn{border:1px solid var(--ink);padding:7px 12px;text-decoration:none!important}.hero{border-bottom:2px solid var(--ink);padding:78px 0 72px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-weight:900;font-size:11px}.hero h1{font-size:clamp(52px,10vw,122px);line-height:.86;letter-spacing:-.09em;margin:22px 0 28px}.hero p{font-size:clamp(18px,2.2vw,25px);line-height:1.35;max-width:760px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--ink);font-weight:800;text-decoration:none;background:var(--ink);color:#fff}.btn.alt{background:#fff;color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:55px}.stat{padding:16px 12px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{font-size:22px;display:block;letter-spacing:-.04em}.stat span{display:block;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:235px 1fr;gap:56px;padding:46px 0 90px}.sidebar{position:sticky;top:88px;align-self:start}.sidebar-title{font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:900;margin-bottom:10px}.side-link{display:block;text-decoration:none;color:var(--muted);padding:6px 0;font-size:13px}.side-link:hover,.side-link.active{color:var(--ink);font-weight:800}.side-link.active{border-left:2px solid var(--ink);padding-left:10px}.content section{padding:16px 0 52px;border-bottom:1px solid var(--line);margin-bottom:42px}.content section:last-child{border-bottom:0}.content h2{font-size:32px;line-height:1.05;letter-spacing:-.05em;margin:0 0 15px}.content h3{font-size:18px;letter-spacing:-.02em;margin:28px 0 8px}.content p{max-width:800px}.lead{font-size:18px;color:#303030;max-width:820px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}.card{border:1px solid var(--line);padding:20px;background:#fff}.card:hover{border-color:var(--ink)}.card b{display:block;margin-bottom:5px}.notice{border-left:4px solid var(--ink);background:var(--soft);padding:16px 18px;margin:22px 0}.notice strong{display:block}.code-wrap{position:relative;margin:16px 0 22px}.copy{position:absolute;right:10px;top:10px;border:1px solid #666;background:#222;color:#fff;font-size:11px;padding:5px 9px}.copy.done{background:#fff;color:#111}pre{overflow:auto;background:#111;color:#f4f4f4;padding:20px;margin:0;font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid #111}code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--soft);padding:2px 5px}pre code{background:none;padding:0}.pillrow{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.pill{border:1px solid var(--ink);padding:5px 10px;font-size:12px;font-weight:800}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:600px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:11px 9px;vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.06em}.searchbox{display:flex;gap:8px;margin:16px 0}.searchbox input{width:100%;border:1px solid var(--ink);padding:10px 12px;outline:0}.searchbox input:focus{box-shadow:0 0 0 2px #ddd}.filter-note{font-size:12px;color:var(--muted);margin-top:7px}.accordion{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-weight:800}details p{margin-bottom:4px}.footer{background:#111;color:#fff;padding:32px 0}.footer a{color:#fff}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}.muted{color:var(--muted)}.hide{display:none!important}@media(max-width:850px){.layout{grid-template-columns:1fr;gap:10px}.sidebar{position:static;border-bottom:1px solid var(--line);padding-bottom:16px}.side-link{display:inline-block;margin-right:14px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}@media(max-width:600px){.shell{padding:0 17px}.topbar-inner{height:56px}.topnav a:not(.github-btn){display:none}.hero{padding:55px 0 48px}.hero h1{font-size:68px}.layout{padding-top:28px}.content h2{font-size:28px}.stats{margin-top:38px}}
+</style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="eyebrow">Python library · version 1.5.2 release-ready</div>
-    <h1>xapiweb</h1>
-    <p class="lead">A zero-dependency Python client for selected X web API operations, with structured responses, pacing, transaction IDs, write verification, and resource modules.</p>
-    <div class="meta"><span class="tag">Python 3.8+</span><span class="tag">No runtime dependencies</span><span class="tag">Unofficial client</span></div>
-  </div>
-</header>
-<main class="wrap">
-  <section>
-    <h2>Install</h2>
-    <pre><code>pip install xapiweb</code></pre>
-    <p>For a local editable checkout, run <code>pip install -e .</code>. The package is designed for Python 3.8 and newer.</p>
-  </section>
-  <section>
-    <h2>Quick start</h2>
-    <pre><code>from xapiweb import XClient
+<header class="topbar"><div class="shell topbar-inner"><a class="brand" href="#top">xapiweb <small>DOCS 1.5.4</small></a><nav class="topnav"><a href="#install">Install</a><a href="#api">API</a><a href="#security">Security</a><a class="github-btn" href="https://github.com/newidu/xapiweb" target="_blank" rel="noreferrer">GitHub ↗</a></nav></div></header>
+<header class="hero" id="top"><div class="shell"><div class="eyebrow">Python library · zero runtime dependencies</div><h1>xapiweb</h1><p>A focused Python client for selected X web API operations with structured responses, pacing, transaction IDs, write verification, and resource modules.</p><div class="hero-actions"><a class="btn" href="https://pypi.org/project/xapiweb/" target="_blank" rel="noreferrer">Install from PyPI ↗</a><a class="btn alt" href="#quickstart">View quickstart ↓</a></div><div class="stats"><div class="stat"><b>3.8+</b><span>Python support</span></div><div class="stat"><b>0</b><span>Runtime dependencies</span></div><div class="stat"><b>14</b><span>Resource modules</span></div><div class="stat"><b>10/10</b><span>Offline tests</span></div></div></div></header>
+<main class="shell layout"><aside class="sidebar"><div class="sidebar-title">On this page</div><a class="side-link" href="#install">Install</a><a class="side-link" href="#quickstart">Quickstart</a><a class="side-link" href="#auth">Authentication</a><a class="side-link" href="#api">API surface</a><a class="side-link" href="#responses">Responses</a><a class="side-link" href="#security">Security</a><a class="side-link" href="#troubleshooting">Troubleshooting</a><a class="side-link" href="#tests">Tests</a></aside>
+<div class="content">
+<section id="install"><h2>Install</h2><p class="lead">Install the latest published release from the public Python Package Index.</p><div class="code-wrap"><button class="copy" data-copy="pip install xapiweb">Copy</button><pre><code>pip install xapiweb</code></pre></div><div class="pillrow"><span class="pill">Python 3.8+</span><span class="pill">stdlib only</span><span class="pill">xapiweb 1.5.4</span></div></section>
+<section id="quickstart"><h2>Quickstart</h2><p>Use a private local session file created from your own browser session. The package never needs a live session file inside the repository.</p><div class="code-wrap"><button class="copy" data-copy="from xapiweb import XClient\nfrom xapiweb.resources.timelines import extract_tweets\n\nx = XClient.from_session_file(\"my_data.json\")\nprint(x.health().status)\nprint(x.me())\n\nfor tweet in extract_tweets(x.timelines.home(count=10)):\n    print(tweet[\"author\"], tweet[\"text\"][:80])">Copy</button><pre><code>from xapiweb import XClient
 from xapiweb.resources.timelines import extract_tweets
 
 x = XClient.from_session_file("my_data.json")
@@ -61,56 +24,21 @@ print(x.health().status)
 print(x.me())
 
 for tweet in extract_tweets(x.timelines.home(count=10)):
-    print(tweet["author"], tweet["text"][:80])</code></pre>
-    <div class="notice"><strong>Keep sessions private.</strong> A session file can contain a live browser session. Never commit <code>my_data.json</code>, cookies, CSRF tokens, bearer tokens, or generated caches to GitHub, PyPI, screenshots, or issue trackers.</div>
-  </section>
-  <section>
-    <h2>Authentication</h2>
-    <p>Sign in to X in a desktop browser. From a request in browser developer tools, copy the complete <code>Cookie</code> header and the <code>x-csrf-token</code> header. The CSRF value must match the <code>ct0</code> cookie value.</p>
-    <pre><code>from xapiweb import XClient
-
+    print(tweet["author"], tweet["text"][:80])</code></pre></div></section>
+<section id="auth"><h2>Authentication</h2><p>Sign in to X in a desktop browser. In developer tools, copy the complete <code>Cookie</code> request header and the <code>x-csrf-token</code> request header. The CSRF value must match the <code>ct0</code> cookie value.</p><div class="notice"><strong>Never publish credentials.</strong> Keep <code>my_data.json</code>, cookies, bearer tokens, CSRF tokens, screenshots, logs, and generated caches out of GitHub, PyPI, and issue trackers.</div><div class="code-wrap"><button class="copy" data-copy='from xapiweb import XClient\nx = XClient(cookie="&lt;full-cookie&gt;", csrf_token="&lt;ct0-value&gt;")\nprint(x.health().status)'>Copy</button><pre><code>from xapiweb import XClient
 x = XClient(cookie="&lt;full-cookie&gt;", csrf_token="&lt;ct0-value&gt;")
-print(x.health().status)  # 200 means connected</code></pre>
-    <p>For the complete Sinhala walkthrough, read <a href="../xapiweb/CONNECT_GUIDE.md">CONNECT_GUIDE.md</a>.</p>
-  </section>
-  <section>
-    <h2>Capabilities</h2>
-    <div class="grid">
-      <div class="card"><strong>Reads</strong>Timelines, search, trends, users, notifications, lists, communities, settings, tweet details, media, and statistics.</div>
-      <div class="card"><strong>Writes</strong>Tweets, replies, threads, polls, deletes, pins, disclosures, follows, moderation, likes, reposts, bookmarks, and selected DMs.</div>
-      <div class="card"><strong>Media</strong>Image upload, chunked video upload, media inspection, and downloads.</div>
-      <div class="card"><strong>Reliability</strong>Request pacing, limited retry handling, transaction ID management, structured errors, and verification of state-changing operations.</div>
-    </div>
-  </section>
-  <section>
-    <h2>Common operations</h2>
-    <table>
-      <thead><tr><th>Resource</th><th>Examples</th></tr></thead>
-      <tbody>
-        <tr><td><code>x.tweets</code></td><td><code>get</code>, <code>detail</code>, <code>views</code>, <code>stats</code>, <code>post</code>, <code>post_poll</code>, <code>post_thread</code>, <code>delete</code></td></tr>
-        <tr><td><code>x.timelines</code></td><td><code>home</code>, <code>search</code>, user timelines, followers, following, and parsers</td></tr>
-        <tr><td><code>x.users</code></td><td>Lookup by screen name or ID, viewer, recommendations, and credential checks</td></tr>
-        <tr><td><code>x.engagement</code></td><td><code>like</code>, <code>retweet</code>, <code>bookmark_add</code>, and corresponding removal operations</td></tr>
-        <tr><td><code>x.media</code></td><td><code>upload_image</code>, <code>upload_video</code>, <code>download</code>, and tweet-media downloads</td></tr>
-        <tr><td><code>x.notifications</code></td><td>Notification lists, badge counts, cursors, and notification parsing</td></tr>
-      </tbody>
-    </table>
-  </section>
-  <section>
-    <h2>Responses and errors</h2>
-    <p>Each request returns a <code>Response</code> object with <code>status</code>, <code>data</code>, <code>raw</code>, <code>ok</code>, <code>get()</code>, and <code>summary()</code>.</p>
-    <p>Important exception types include <code>XAuthError</code>, <code>XRateLimitError</code>, <code>XTxnError</code>, <code>XValidationError</code>, <code>XApiError</code>, and <code>XVerifyError</code>. A successful HTTP acknowledgement is not treated as proof that a state change completed; verification is enabled by default.</p>
-  </section>
-  <section>
-    <h2>Tests and responsible use</h2>
-    <pre><code>python3 xapiweb/tests/test_offline.py</code></pre>
-    <p>The offline test suite does not contact X. Live smoke and quickstart scripts require your own private session. Use a conservative request pace, respect X terms and rate limits, and operate only on accounts and data you are authorized to control. Operations with real-world side effects require explicit confirmation where applicable.</p>
-  </section>
-  <section>
-    <h2>Links</h2>
-    <p><a href="https://pypi.org/project/xapiweb/">PyPI</a> · <a href="https://test.pypi.org/project/xapiweb/">TestPyPI</a> · <a href="../README.md">README</a> · <a href="../xapiweb/CONNECT_GUIDE.md">Sinhala connection guide</a></p>
-  </section>
-</main>
-<footer><div class="wrap">xapiweb documentation · Keep credentials private · Unofficial client</div></footer>
+print(x.health().status)  # 200 means connected</code></pre></div><p>Read the <a href="../xapiweb/CONNECT_GUIDE.md">full Sinhala connection guide</a> for browser setup and troubleshooting.</p></section>
+<section id="api"><h2>API surface</h2><p>Resources group related operations behind one client. The complete method list is maintained in the project README.</p><div class="searchbox"><input id="apiSearch" type="search" placeholder="Filter resources, e.g. media or notifications" aria-label="Filter API resources"></div><div class="grid" id="apiGrid"><div class="card api-card"><b><code>x.tweets</code></b><span>Reads, posts, replies, polls, threads, deletes, pins, media, stats, and disclosures.</span></div><div class="card api-card"><b><code>x.timelines</code></b><span>Home, search, user timelines, followers, following, cursors, and parsers.</span></div><div class="card api-card"><b><code>x.users</code></b><span>Lookup by ID or screen name, viewer, recommendations, and credential checks.</span></div><div class="card api-card"><b><code>x.engagement</code></b><span>Likes, reposts, bookmarks, downvotes, and removal operations.</span></div><div class="card api-card"><b><code>x.media</code></b><span>Image upload, chunked video upload, inspection, and downloads.</span></div><div class="card api-card"><b><code>x.notifications</code></b><span>Notification lists, badge counts, cursors, SSE samples, and parsers.</span></div><div class="card api-card"><b><code>x.follows</code></b><span>Follow, unfollow, lists, requests, incoming, outgoing, and retweets settings.</span></div><div class="card api-card"><b><code>x.dms</code></b><span>Inbox, blocking, confirmed sends, and event destruction.</span></div></div><p id="noResults" class="muted hide">No matching resource.</p></section>
+<section id="responses"><h2>Responses and errors</h2><p>Each request returns a <code>Response</code> with <code>status</code>, <code>data</code>, <code>raw</code>, <code>ok</code>, <code>get()</code>, and <code>summary()</code>.</p><div class="table-wrap"><table><thead><tr><th>Type</th><th>Use</th></tr></thead><tbody><tr><td><code>XAuthError</code></td><td>Session expired or authentication rejected.</td></tr><tr><td><code>XRateLimitError</code></td><td>Rate limit or temporary server refusal.</td></tr><tr><td><code>XTxnError</code></td><td>Transaction or endpoint response could not be verified.</td></tr><tr><td><code>XValidationError</code></td><td>Input does not satisfy the operation contract.</td></tr><tr><td><code>XVerifyError</code></td><td>State-changing operation was not confirmed by a reread.</td></tr></tbody></table></div></section>
+<section id="security"><h2>Security and responsible use</h2><p>Use xapiweb only with accounts, sessions, and data you are authorized to control. Keep request pacing conservative and respect X terms, privacy requirements, rate limits, and applicable law.</p><div class="grid"><div class="card"><b>Private sessions</b><span>Store session files locally with restrictive permissions. Do not commit them.</span></div><div class="card"><b>Side effects</b><span>Writes, follows, moderation, DMs, and deletes can affect real accounts. Use explicit confirmation where supported.</span></div><div class="card"><b>Unofficial client</b><span>Web contracts can change. Pin versions and review errors before retrying.</span></div><div class="card"><b>Safe distribution</b><span>The published package contains source code but no user session credentials.</span></div></div></section>
+<section id="troubleshooting"><h2>Troubleshooting</h2><div class="accordion"><details><summary>HTTP 401 or XAuthError</summary><p>Recapture the browser Cookie and ct0 values. Confirm the browser session is still logged in.</p></details><details><summary>403, 429, or XAutomationFlag</summary><p>Stop bursts, wait, and increase <code>min_interval</code>. Do not run repeated retries against a flagged session.</p></details><details><summary>XVerifyError after a write</summary><p>Check that the operation used the correct original ID and that the state reread completed.</p></details><details><summary>Transaction or 404 errors</summary><p>Wait and retry conservatively. Endpoint contracts can change when X updates its web client.</p></details></div></section>
+<section id="tests"><h2>Tests</h2><p>The offline suite does not contact X and validates imports, parsing, response handling, guards, media helpers, and notifications.</p><div class="code-wrap"><button class="copy" data-copy="python3 xapiweb/tests/test_offline.py">Copy</button><pre><code>python3 xapiweb/tests/test_offline.py</code></pre></div><p><a href="https://pypi.org/project/xapiweb/1.5.4/" target="_blank" rel="noreferrer">PyPI 1.5.4 ↗</a> · <a href="https://github.com/newidu/xapiweb" target="_blank" rel="noreferrer">GitHub repository ↗</a></p></section>
+</div></main>
+<footer class="footer"><div class="shell footer-row"><span>xapiweb documentation · 1.5.4</span><span><a href="https://pypi.org/project/xapiweb/">PyPI</a> · <a href="https://github.com/newidu/xapiweb">GitHub</a> · <a href="#top">Back to top ↑</a></span></div></footer>
+<script>
+const links=[...document.querySelectorAll('.side-link')];const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-25% 0px -65%'});sections.forEach(s=>observer.observe(s));
+document.querySelectorAll('.copy').forEach(btn=>btn.addEventListener('click',async()=>{const text=btn.dataset.copy;try{await navigator.clipboard.writeText(text);btn.textContent='Copied';btn.classList.add('done');setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('done')},1300)}catch(e){btn.textContent='Select manually'}}));
+const search=document.querySelector('#apiSearch'),cards=[...document.querySelectorAll('.api-card')],empty=document.querySelector('#noResults');search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();let shown=0;cards.forEach(c=>{const yes=!q||c.textContent.toLowerCase().includes(q);c.classList.toggle('hide',!yes);if(yes)shown++});empty.classList.toggle('hide',shown>0)});
+</script>
 </body>
 </html>
