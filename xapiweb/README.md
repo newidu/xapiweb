@@ -1,4 +1,4 @@
-# xapiweb — X Web API Python Library 🐦 (v1.5.2)
+# xapiweb — X Web API Python Library 🐦 (v1.5.5)
 
 **Stdlib only. No pip install needed.** `x_api_pack` එකේ proven API 157ම (157/157 live 2026-09-19) + recipes + rules ඔක්කොම එකතු කරලා හදපු unified Python library එක — ඊට උඩින් අලුත් features live prove කරලා එකතු කරලා තියෙනවා.
 
@@ -6,7 +6,7 @@
 
 | Version | Added |
 |---|---|
-| **v1.5.2** | 🔔 **Notifications list** (`notifications.list()` All/Verified/Mentions + `extract_notifications()` parser + paging, user-captured qid, live proven) |
+| **v1.5.5** | 🔔 **Notifications list** (`notifications.list()` All/Verified/Mentions + `extract_notifications()` parser + paging, user-captured qid, live proven) |
 | **v1.4.0** | 🗳️ **Polls** (`create_poll_card`/`post_poll`, 2-4 choices, full cycle proven) · 🧵 **Threads** (`post_thread`, proven) · 🎬 **Video upload** (`upload_video`, chunked+processing, attach proven) · 🤝 **accept/deny/cancel** follow requests (routing proven 409/49) · ✉️ **DM send** (confirm-gated, proven live) + `destroy` (proven, 204) |
 | v1.3.1 | `misc.log_promoted_view()` — parameterized promoted-impression beacon (honest docs: NOT organic views) |
 | v1.3.0 | 📸🎬 **Media download**: `tweets.media(id)` + `media.download()` / `download_tweet_media()` (photo + best-mp4, live proven) |
@@ -17,7 +17,7 @@
 ## Install
 
 ```bash
-unzip xapiweb-v1.5.2.zip && cd xapiweb-v1.5.2
+unzip xapiweb-v1.5.5.zip && cd xapiweb-v1.5.5
 # zero dependencies — just use the folder
 cp -r xapiweb /your/project/
 # or
@@ -195,7 +195,7 @@ Tweet edit (no op in bundle) · scheduled-post (no endpoint found) · `lists/mem
 ## Zip contents
 
 ```
-xapiweb-v1.5.2.zip
+xapiweb-v1.5.5.zip
 ├── xapiweb/                  library (client, session, errors, response, qids, 14 resources)
 │   ├── README.md          ← this file
 │   └── CONNECT_GUIDE.md   ← Sinhala account-connect guide
