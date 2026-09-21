@@ -1,0 +1,16 @@
+# Private local session and generated runtime data
+my_data.json
+.txn_cache.json
+*.pyc
+__pycache__/
+
+# Build and test artifacts
+build/
+*.egg-info/
+.venv/
+venv/
+
+# Local operating-system/editor files
+.DS_Store
+.vscode/
+.idea/

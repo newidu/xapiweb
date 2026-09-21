@@ -1,0 +1,10 @@
+[project]
+name = "xapiweb"
+version = "1.5.1"
+description = "Unified Python library for the X web API (stdlib only, 157 proven endpoints)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
